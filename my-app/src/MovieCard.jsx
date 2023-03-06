@@ -1,8 +1,12 @@
 import React from "react";
 
 export default function MovieCard({ movie }) {
+  const link = `https://www.google.com/search?q=${movie.Title}`;
   return (
-    <div className="w-[310px] h-[460px]rounded-3xl relative cursor-pointer border-rounded-3xl border-black  hover:opacity-80 hover:scale-105">
+    <div
+      className="w-[310px] h-[460px]rounded-3xl relative cursor-pointer border-rounded-3xl border-black  hover:opacity-80 hover:scale-105"
+      onClick={() => window.open(link, "_blank")}
+    >
       <img
         src={
           movie.Poster !== "N/A"
